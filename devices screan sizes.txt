@@ -1,0 +1,4 @@
+📱 Mobile (Phones) → @media (max-width: 480px)
+📟 Tablets (Portrait Mode) → @media (max-width: 768px)
+💻 Laptops & Small Screens → @media (max-width: 1024px)
+🖥 Large Desktops → @media (min-width: 1200px)

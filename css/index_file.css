@@ -1,42 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
-
-html {
-    scroll-behavior: smooth;
-    font-size: 62.5%;
-  }
-  
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-body{
+body {
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
-    background-color: rgb(24, 24, 24);
-    color: white;
+    background-color: antiquewhite;
+    color: rgb(109, 52, 52);
     line-height: 1.6;
     padding: 20px;
 }
-  
 
-header{
+header {
     margin-top: 1px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 1rem 9%;
-    background-color:transparent;
-    color: white;
+    background-color: transparent;
+    color: #413f3f;
     padding: 15px 20px;
 
     filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.5));
@@ -46,38 +26,73 @@ header{
     z-index: 100;
 }
 
-.logo{
-    font-size: 100px;
-    color: #b74b4b;
-    font-weight: bolder;
+/* From Uiverse.io by satyamchaudharydev */ 
+/* === removing default button style ===*/
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
     cursor: pointer;
-    transition: 0.5s ease;
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(0, 0, 0, 0.6);
+    --animation-color: #c5590d;
+    --fs-size: 4em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+nav{
+    border-bottom: 1px solid #413f3f;
     
 }
 
-.logo:hover{
-    transform: scale(1.1);
-    color: #ffffff;
-    text-shadow: 0 0 25px #fb9e9e;
-}
-
-nav a{
+nav a {
     font-size: 1.8rem;
-    color: white;
+    color: #413f3f;
     margin-left: 4rem;
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
+
 }
 
 nav a:hover,
-nav a.active{
+nav a.active {
     color: #b74b4b;
-    border-bottom: 3px solid #b74b4b;
+
 }
 
-@media(max-width:995px){
-    nav{
+@media(max-width:995px) {
+    nav {
         position: absolute;
         top: 0;
         right: 0;
@@ -86,22 +101,18 @@ nav a.active{
         border-bottom: 3px solid #d1abab;
         border-bottom-left-radius: 2rem;
         padding: 1rem solid;
-        
-        background-color: rgba(0, 0, 0, 0.6); /* Black with 60% transparency */
+
+        background-color: rgba(0, 0, 0, 0.6);
+        /* Black with 60% transparency */
         color: white;
         padding: 15px 20px;
 
 
 
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
     }
-
-
-
-
-
-
 }
+
 
 section{
     min-height: 100vh;
@@ -113,7 +124,8 @@ section{
     justify-content: center;
     align-items: center;
     gap: 8rem;
-    background-color: rgb(24, 24, 24);
+    background-color: antiquewhite;
+   
 }
 
 .home .home-content h1{
@@ -123,7 +135,7 @@ section{
 }
 
 span{
-    color: #ffffff;
+    color: black;
 }
 
 #span-zonu{
@@ -154,14 +166,6 @@ span{
 }
 
 
-.home-img img{
-    position: relative;
-    width: 32vw;
-    box-shadow: 0 0 25px solid #b74b4b;
-    cursor: pointer;
-    transition: 0.5s linear;
-}
-
 
 .social-icons a{
     display: inline-flex;
@@ -185,13 +189,13 @@ span{
     box-shadow: 0  0 25px #b74b4b;
 }
 
-.btn{
+.btn-hireme{
     display: inline-block;
     padding: 1rem 2.8rem;
-    background-color: black;
+    background-color: antiquewhite;
     border-radius: 4rem;
     font-size: 1.6rem;
-    color: #b74b4b;
+    color:black;
     letter-spacing: 0.3rem;
     font-weight: 600;
     border: 2px solid #b74b4b;
@@ -199,7 +203,7 @@ span{
     cursor: pointer;
 }
 
-.btn:hover{
+.btn-hireme:hover{
     transform: scale3d(1.03);
     background-color: #b74b4b;
     color: black;
@@ -218,24 +222,24 @@ span{
 
 .typing-text span::before{
     content: "software Developer";
-    color: #b74b4b;
+    color: #000000;
     animation: words 20s infinite;
 }
 
 .typing-text span::after{
     content: "";
-    background-color:rgb(24, 24, 24);
+    background-color:antiquewhite;
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
-    border-left: 3px solid black;
+    border-left: 3px solid rgb(0, 0, 0);
     right: -8;
     animation: cursor 0.6s infinite;
 }
 
 @keyframes cursor{
     to{
-        border-left: 3px solid #b74b4b;
+        border-left: 3px solid antiquewhite;
     }
 }
 
@@ -283,82 +287,6 @@ span{
     }
 }
 
-.line {
-    height: 5px;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    max-width: 100%; /* Automatically matches the image width */
- 
-
-  }
-  
-  .floating-circles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.circle {
-    position: absolute;
-    background-color: rgba(183, 75, 75, 0.8);
-    border-radius: 50%;
-    animation: float 6s infinite ease-in-out;
-    overflow: hidden; /* Added to control overflow */
-}
-.circle:nth-child(1) {
-    width: 5vw;
-    height: 5vw;
-    left: 10%;
-    top: 15%;
-    animation-delay: 0s;
-}
-
-.circle:nth-child(2) {
-    width: 3.5vw;
-    height: 3.5vw;
-    left: 70%;
-    top: 20%;
-    animation-delay: 1.5s;
-}
-
-.circle:nth-child(3) {
-    width: 4vw;
-    height: 4vw;
-    left: 30%;
-    top: 60%;
-    animation-delay: 2s;
-}
-
-.circle:nth-child(4) {
-    width: 6vw;
-    height: 6vw;
-    left: 80%;
-    top: 70%;
-    animation-delay: 3s;
-}
-
-.circle:nth-child(5) {
-    width: 3vw;
-    height: 3vw;
-    left: 50%;
-    top: 40%;
-    animation-delay: 2.5s;
-}
-
-@keyframes float {
-    0% {
-        transform: translate(0, 0);
-    }
-    50% {
-        transform: translate(10px, -20px);
-    }
-    100% {
-        transform: translate(0, 0);
-    }
-}
 
 .home-img {
     position: relative;
@@ -371,46 +299,12 @@ span{
     width: 32vw;
     box-shadow: 0 0 25px solid #b74b4b;
     cursor: pointer;
-    transition: 0.5s linear;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
-.home-img .floating-circles {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -1;
+.home-img img:hover {
+    transform: scale(1.1); /* Slightly scale up */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+    filter: brightness(1.2); /* Make it slightly brighter */
+    border-radius: 50px;
 }
-
-@media (max-width: 768px) {
-    .circle {
-        width: 2vw;
-        height: 2vw;
-    }
-}
-
-footer{
-    font-weight: 400;
-    font-style: italic;
-    display: flex;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
